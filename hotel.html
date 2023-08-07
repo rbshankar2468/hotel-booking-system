@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Management System</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom, #fee140, #fa709a);
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00796b;
+            font-family: cursive;
+            font-size: 45px;
+        }
+
+        h3 {
+            top:0%;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+            margin-top: 10%;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 30vw;
+            height: 60vh;
+            border-radius: 10px;
+            background-size: cover;
+            box-shadow: 0px 0px 3px #616161;
+            position: relative;
+        }
+
+        .about {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 85%;
+            background-color: rgba(109, 76, 65, 0.4);
+            clip-path: inset(99.9% 0% 0% 0%);
+            transition: 2s;
+            color: #ffffff;
+        }
+
+        .card:hover .about {
+            clip-path: inset(0% 0% 0% 0%);
+        }
+
+        button {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            margin-top: 5px;
+        }
+        input{width:5vw;}
+    </style>
+</head>
+<body>
+    <h1>Hotel Booking Management System</h1>
+    <div class="main">
+        <div class="container">
+            <div class="card" style="background-image: url('https://htl-img-res-new.s3.ap-south-1.amazonaws.com/4832/20230720/main.jpg');">
+                <div class="about">
+                    <h1 style="font-family: serif;color:#fee140">Bervistay hotel</h1>
+                    <h3>location: Bengaluru, 5-star hotel, A/C & non-A/C</h3>
+                    <h3>availability: 24/7</h3>
+                    <h3>address: RBI bank road</h3>
+                    no.of rooms:<input type="number">
+                    <button style="width: 15vw; height: 8vh; border-radius: 10%; text-align: center; background-color: #e65100; margin-left: 20%; padding-bottom: 20px;" id="bt1" onclick="change('bt1')">book room</button>
+                </div>
+            </div>
+            <div class="card" style="background-image: url('https://media.radissonhotels.net/image/radisson-blu-hotel-atria-bengaluru/exterior/16256-116518-f65028817_3xl.jpg?impolicy=HomeHero');">
+                <div class="about">
+                    <h1 style="font-family: serif;color:#fee140">Radisson hotel</h1>
+                    <h3>location: Bengaluru, 5-star hotel, A/C & non-A/C</h3>
+                    <h3>availability: 24/7</h3>
+                    <h3>address: near NIMHANS hospital</h3>
+                    no.of rooms:<input type="number">
+                    <button style="width: 15vw; height: 8vh; border-radius: 10%; text-align: center; background-color: #e65100; margin-left: 20%; padding-bottom: 20px;" id="bt2" onclick="change('bt2')">book room</button>
+                </div>
+            </div>
+            <div class="card" style="background-image: url('https://www.marriott.com/content/dam/marriott-leisure/destinations/hero/asia/india/bengaluru/IndiaBengaluru_hero_destinations.jpg');">
+                <div class="about">
+                    <h1 style="font-family: serif;color:#fee140">Marriott hotel</h1>
+                    <h3>location: Bengaluru, 5-star hotel, A/C & non-A/C</h3>
+                    <h3>availability: 24/7</h3>
+                    <h3>address: near NIMHANS hospital</h3>
+                    no.of rooms:<input type="number">
+                    <button style="width: 15vw; height: 8vh; border-radius: 10%; text-align: center; background-color: #e65100; margin-left: 20%; padding-bottom: 20px;" id="bt3" onclick="change('bt3')">book room</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card" style="background-image: url('https://www.peninsula.com/-/media/homepage---andy/exterior-2_1920.jpg');">
+                <div class="about">
+                    <h1 style="font-family: serif;color:#fee140">Mohali hotel</h1>
+                    <h3>location: Tamilnadu, 3-star hotel, A/C & non-A/C</h3>
+                    <h3>availability: 24/7</h3>
+                    <h3>address: Mohali area</h3>
+                    no.of rooms:<input type="number">
+                    <button style="width: 15vw; height: 8vh; border-radius: 10%; text-align: center; background-color: #e65100; margin-left: 20%; padding-bottom: 20px;" id="bt4" onclick="change('bt4')">book room</button>
+                </div>
+            </div>
+            <div class="card" style="background-image: url('https://www.kayak.co.in/rimg/himg/ab/64/d9/expediav2-38713-6584af-750938.jpg?width=720&height=576&crop=true');">
+                <div class="about">
+                    <h1 style="font-family: serif;color:#fee140">E-central hotel</h1>
+                    <h3>location: Delhi, 3-star hotel, A/C & non-A/C</h3>
+                    <h3>availability: 6 am to 12 pm</h3>
+                    <h3>address: near Fassal area</h3>
+                    no.of rooms:<input type="number">
+                    <button style="width: 15vw; height: 8vh; border-radius: 10%; text-align: center; background-color: #e65100; margin-left: 20%; padding-bottom: 20px;" id="bt5" onclick="change('bt5')">book room</button>
+                </div>
+            </div>
+            <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mumbai_Aug_2018_%2843397784544%29.jpg/1200px-Mumbai_Aug_2018_%2843397784544%29.jpg');">
+                <div class="about">
+                    <h1 style="font-family: serif;color:#fee140">Taj Mahal hotel</h1>
+                    <h3>location: Mumbai, 5-star hotel, A/C & non-A/C</h3>
+                    <h3>availability: 24/7</h3>
+                    <h3>address: Colaba area</h3>
+                    no.of rooms<input type="number">
+                    <button style="width: 15vw; height: 8vh; border-radius: 10%; text-align: center; background-color: #e65100; margin-left: 20%; padding-bottom: 20px;" id="bt6" onclick="change('bt6')">book room</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function change(re) {
+            document.getElementById(re).innerHTML = "BOOKING CONFIRMED";
+        }
+    </script>
+</body>
+</hTML>
